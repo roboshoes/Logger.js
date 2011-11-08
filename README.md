@@ -16,7 +16,7 @@ Usage
 To use it simply add it in the header like any other *libary* and it provides simple methods, such as:
 
 `Logger.log("coordinates", valueX, valueY);`
-Self explanatory. It takes any amound of paramters and chains them using space.
+Self explanatory. It takes any amount of paramters and chains them using space.
 
 `Logger.hide();`
 Hides the logging panel.
