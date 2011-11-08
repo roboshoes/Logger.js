@@ -4,9 +4,9 @@ Logger.js
 Description
 -----------
 
-Logger.js is a very simple utiliy to create a small logging panel on the top left corner of the window. 
-It's purpose it really to log data like mouse touch positions other constantly changing values without
-having to go the console, which I feel a really unconfortable on mobile devices.
+Logger.js is a very simple tool that creates a small logging panel in the top left corner of the window. 
+It's purpose is to log data like mouse/touch positions or other constantly changing values without
+having to go the console, which I feel is really unconfortable on mobile devices.
 
 Also it provides a possibility to trace info without changing the height of the browser on iDevices.
 
