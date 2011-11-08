@@ -52,7 +52,7 @@ var Logger = (function(_document) {
     }
     
     var writeToNode = function(values) {
-        logString = "";
+        var logString = "";
         
         for (var i = 0; i < values.length; i++) {
             if (i > 0) logString += " ";
