@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+        <title>Logger Demo</title>
+        
+        <script src="../src/logger.js"></script>
+    </head>
+    
+    <body>
+        <script>
+            
+            window.onmousedown = function(event) {
+                Logger.hide();
+            }
+            
+            window.onmouseup = function(event) {
+                Logger.show();
+            }
+            
+            window.onmousemove = function(event) {
+                Logger.log("mouse position:", event.pageX, event.pageY);
+            }
+            
+        </script>
+    </body>
+</html>

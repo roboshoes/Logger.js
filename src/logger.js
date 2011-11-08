@@ -48,7 +48,7 @@ var Logger = (function(_document) {
         if (_document.body) document.body.appendChild(node);
         else _document.addEventListener("DOMContentLoaded", onDOMComplete);
         
-        writeToNode("Hello World");
+        log("o_o");
     }
     
     var writeToNode = function(values) {
@@ -56,7 +56,7 @@ var Logger = (function(_document) {
         
         for (var i = 0; i < values.length; i++) {
             if (i > 0) logString += " ";
-            logString +=  values[i].toString();
+            logString +=  values[i];
         }
         
         node.innerHTML = logString;  
@@ -74,6 +74,7 @@ var Logger = (function(_document) {
     return {
         log: log,
         forceLog: forcelog,
+        
         hide: hide,
         show: show
     }
