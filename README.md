@@ -27,3 +27,7 @@ Guess what.
 `Logger.forceLog("something");`
 In case the logger is currently hidden it shows the logger in addition to the normale Logger.log behavior.
 
+`Logger.inspect({a: 1, b: 2});`
+Logs every element of an object in a tree structure in the console. This is especially useful for debugging 
+in IE, to see the actual stateof an object.
+

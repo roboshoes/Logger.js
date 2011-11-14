@@ -22,6 +22,16 @@
                 Logger.log("mouse position:", event.pageX, event.pageY);
             }
             
+            Logger.inspect({
+                emptyFunction: function() {},
+                number: 3,
+                name: "mathias",
+                array: [1, 2, 3, 4, 5, 6],
+                nestedArray: [1, 2, {a: "a", b: "b"}]
+            });
+            
+            Logger.inspect(console);
+            
         </script>
     </body>
 </html>

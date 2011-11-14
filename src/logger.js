@@ -26,6 +26,10 @@ var Logger = (function(_document) {
         node.style.display = "block";
     }
     
+    var inspect = function(value) {
+        console.log(getTree(value));
+    }
+    
     // ======================
     // PRIVATE
     // ======================
@@ -66,6 +70,32 @@ var Logger = (function(_document) {
         _document.body.appendChild(node);
     }
     
+    var getTree = function(value, indent) {
+        
+        indent = indent || 0;
+
+        if (typeof value  === "object") {
+            var branch = "[object]";
+            
+            for (var key in value) {
+                branch += "\n";
+                branch += getIndent(indent + 1) + key + ": " + getTree(value[key], indent + 1);
+            }
+            
+            return branch;
+        } else if (typeof value === "function") {
+            return "[function]";
+        }
+        
+        return value;
+    }
+    
+    var getIndent = function(amount) {
+        string = "";
+        for (var i = 0; i < amount; i++) string += "    ";
+        return string;
+    }
+    
     init();
     
     // ======================
@@ -76,7 +106,9 @@ var Logger = (function(_document) {
         forceLog: forcelog,
         
         hide: hide,
-        show: show
+        show: show,
+        
+        inspect: inspect
     }
     
 })(document);
