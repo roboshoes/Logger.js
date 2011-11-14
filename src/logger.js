@@ -15,10 +15,6 @@ var Logger = (function(_document) {
     }
     
     var hide = function() {
-        writeToNode(arguments);
-    }
-    
-    var hide = function() {
         node.style.display = "none";
     }
     
