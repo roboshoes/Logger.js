@@ -23,7 +23,7 @@ init = ->
 
   Logger.log "o_o"
 
-wirteToNode = (values) ->
+writeToNode = (values) ->
   node.innerHTML = values.join " "
   
 onDOMComplete = ->
@@ -33,7 +33,7 @@ onDOMComplete = ->
 root.Logger =
 
   log: (values...) ->
-    wirteToNode values
+    writeToNode values
     
   show: ->
     node.style.display = "block"
@@ -42,8 +42,8 @@ root.Logger =
     node.style.display = "none";
     
   forcelog: (values...) ->
+    writeToNode values
     Logger.show()
-    Logger.log values
 
 
 init()
